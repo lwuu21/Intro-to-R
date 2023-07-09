@@ -1,0 +1,173 @@
+## Lab 1: An Introduction to Programming in R
+
+### Lauren Wu
+
+This assignment is due at 6:00 PM CST the day of lab. Please provide answers in <span style="color:blue"> blue text </span> and code in code chunks. Knit this file when you are done to check that all code runs. Remember to rename the file to contain *your actual* Last and First name and **submit both the Rmd and Html file to the submission link on Canvas**.
+
+
+**3.1** 
+```{r}
+pi^11
+```
+
+
+**3.2**
+```{r}
+pi * 4e9
+```
+
+
+**3.3**
+```{r}
+
+```
+<span style="color:blue"> 
+The console returns as an error message. This is because R interpreted 4(2+3) as an attempt to call a function 4(), which doesn't exist.
+\span
+
+
+**4.1**
+```{r}
+TRUE + TRUE
+```
+<span style="color:blue"> 
+R assigns a numerical value of 1 to TRUE and 0 to FALSE.
+\span
+
+
+**4.2**
+```{r}
+movie <- "Everything Everywhere All At Once"
+```
+
+
+**5.1**
+<span style="color:blue"> 
+!= assesses whether two things are not equal. 
+>= assesses whether the left is larger than or equal to the right.
+<= assesses whether the left is smaller than or equal to the right.
+< assesses whether the left is smaller than the right. 
+> assesses whether the left is larger than the right
+\span
+
+**5.2**
+<span style="color:blue"> 
+|| represents the OR operator. If any one of the statements are TRUE, the expression will return TRUE.
+\span
+
+
+**5.3**
+```{r}
+x <- 5
+(x > 6) || (x < 8)
+(x > 6) || (x > 8)
+```
+
+
+**6.1**
+```{r}
+carSpeed <- 35
+speedLimit <- 30
+if(carSpeed > speedLimit){ 
+    print("Give ticket") 
+}else{ 
+    print("Do nothing") 
+}
+```
+<span style="color:blue"> 
+when carSpeed <- 35, it fulfills the condition for the code in "if", which executes print("Give ticket").
+when carSpeed <- 29, it doesn't fulfill the condition for the code in if, which leads the code to execute "else", printing "Do nothing".
+\span
+
+
+**6.2**
+```{r}
+patientTemperature <- 103
+if(patientTemperature < 95 || patientTemperature > 103){
+  print("seek medical attention")
+}else{
+  print("do nothing")
+}
+```
+
+
+**6.3**
+```{r}
+if(0){
+  print("a")
+}else {
+  print("b")
+}
+```
+<span style="color:blue"> 
+R reads 0 as false. Because the if condition is false, a is not printed. Because the condition for else is not false, b is printed.
+\span
+
+
+**6.4**
+```{r}
+person <- "happy"
+weather <- "raining"
+if(person == "happy"){
+  if(weather == "sunny"){
+    print("Go outside")
+  }else {
+    print("Stay inside :(")
+  }
+}else{
+  print("Stay inside")
+}
+```
+
+
+**7.1**
+```{r}
+for(i in 1:3){
+    x <- i + 10
+    y <- x * 2
+    z <- y ^ 2    
+    print(z)
+}
+```
+<span style="color:blue"> 
+i is a variable that R substitutes values from 1 to 3 to execute the for loop. x, y, z, and i are all global variables. Defining variables i and z outside the loop prior to its execution will not affect its execution.
+\span
+
+
+**7.2**
+```{r}
+for(i in letters){
+  UPPER <- toupper(i)
+  print(UPPER)
+}
+```
+
+**7.3**
+<span style="color:blue"> 
+when x is even, the value of x%%y is 0. When x is odd, the value is 1.
+\span
+
+```{r}
+y <- 2
+for(x in 1:15){
+  q <- x%%y
+  if(q == 1 || x == 12){
+    print(x)}
+}
+```
+
+
+**7.4**
+<span style="color:blue"> 
+This loop would continue to execute infinitely because x would always be larger than 0, so the condition to execute the while loop is always fulfilled.
+\span
+```{r}
+#     ^take out eval = F hen you're done before knitting the file
+
+x <- 10
+while(x > 0){
+    print(x)
+    x <- x - 1
+}
+```
+
