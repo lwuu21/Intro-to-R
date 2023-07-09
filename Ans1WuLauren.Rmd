@@ -1,32 +1,17 @@
-## Lab 1: An Introduction to Programming in R
+##some text is written in HTML notation for knitting into HTML files
 
-### Lauren Wu
-
-This assignment is due at 6:00 PM CST the day of lab. Please provide answers in <span style="color:blue"> blue text </span> and code in code chunks. Knit this file when you are done to check that all code runs. Remember to rename the file to contain *your actual* Last and First name and **submit both the Rmd and Html file to the submission link on Canvas**.
-
-
-**3.1** 
+**pi to the 11th power** 
 ```{r}
 pi^11
 ```
 
 
-**3.2**
+**pi times 4 x 10^9**
 ```{r}
 pi * 4e9
 ```
 
 
-**3.3**
-```{r}
-
-```
-<span style="color:blue"> 
-The console returns as an error message. This is because R interpreted 4(2+3) as an attempt to call a function 4(), which doesn't exist.
-\span
-
-
-**4.1**
 ```{r}
 TRUE + TRUE
 ```
@@ -35,13 +20,13 @@ R assigns a numerical value of 1 to TRUE and 0 to FALSE.
 \span
 
 
-**4.2**
+**assign string to variable**
 ```{r}
 movie <- "Everything Everywhere All At Once"
 ```
 
 
-**5.1**
+**definitions for logical operations**
 <span style="color:blue"> 
 != assesses whether two things are not equal. 
 >= assesses whether the left is larger than or equal to the right.
@@ -50,13 +35,14 @@ movie <- "Everything Everywhere All At Once"
 > assesses whether the left is larger than the right
 \span
 
-**5.2**
+<br>
+
 <span style="color:blue"> 
 || represents the OR operator. If any one of the statements are TRUE, the expression will return TRUE.
 \span
 
 
-**5.3**
+**testing out logic operators**
 ```{r}
 x <- 5
 (x > 6) || (x < 8)
@@ -64,7 +50,7 @@ x <- 5
 ```
 
 
-**6.1**
+**trying if statements**
 ```{r}
 carSpeed <- 35
 speedLimit <- 30
@@ -80,7 +66,6 @@ when carSpeed <- 29, it doesn't fulfill the condition for the code in if, which 
 \span
 
 
-**6.2**
 ```{r}
 patientTemperature <- 103
 if(patientTemperature < 95 || patientTemperature > 103){
@@ -90,8 +75,6 @@ if(patientTemperature < 95 || patientTemperature > 103){
 }
 ```
 
-
-**6.3**
 ```{r}
 if(0){
   print("a")
@@ -104,7 +87,6 @@ R reads 0 as false. Because the if condition is false, a is not printed. Because
 \span
 
 
-**6.4**
 ```{r}
 person <- "happy"
 weather <- "raining"
@@ -120,7 +102,7 @@ if(person == "happy"){
 ```
 
 
-**7.1**
+**more for loops :')**
 ```{r}
 for(i in 1:3){
     x <- i + 10
@@ -134,7 +116,7 @@ i is a variable that R substitutes values from 1 to 3 to execute the for loop. x
 \span
 
 
-**7.2**
+**trying the toupper() function**
 ```{r}
 for(i in letters){
   UPPER <- toupper(i)
@@ -142,9 +124,9 @@ for(i in letters){
 }
 ```
 
-**7.3**
+**trying out modulo operator*
 <span style="color:blue"> 
-when x is even, the value of x%%y is 0. When x is odd, the value is 1.
+when y=2 and x is even, the value of x%%y is 0. When x is odd, the value is 1.
 \span
 
 ```{r}
@@ -157,7 +139,7 @@ for(x in 1:15){
 ```
 
 
-**7.4**
+**trying a while loop**
 <span style="color:blue"> 
 This loop would continue to execute infinitely because x would always be larger than 0, so the condition to execute the while loop is always fulfilled.
 \span
